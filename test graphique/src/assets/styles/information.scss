@@ -1,0 +1,18 @@
+.info{
+    .info-item {
+        display: flex;
+        align-items: center;
+        padding-bottom: 5em;
+        p{
+            color: #282D30;
+            font-weight: 700;
+        }
+        h5{
+            color: #74798C;
+            font-weight: 500;
+        }
+        p, h5{
+            margin:0 0 0 15px;
+        }
+    }
+}

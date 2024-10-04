@@ -1,0 +1,21 @@
+.cercle {
+  position: relative;
+  width: 200px;
+  height: 100px;
+}
+.cercle h2 {
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.cercle .texte {
+  position: absolute;
+  top: 175%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}/*# sourceMappingURL=cercle.css.map */
