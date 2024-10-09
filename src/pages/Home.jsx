@@ -8,19 +8,56 @@ import Aside from "../components/Aside";
 import "../assets/styles/home.css"
 
 function Home() {
-    const [userActivityData, modifierUserActivity] = useState([1]) 
-    function handleUserActivity(activity){
-        modifierUserActivity(activity.data.sessions)
-    }
-    function handleError(){
-        console.log(("Erreur"));
-    }
+    const [userActivityData, modifierUserActivity] = useState([]) 
+
     useEffect(() => {
     fetch("http://localhost:3000/user/18/activity")
         .then(response => response.json())
-        .then(handleUserActivity)
-        .catch(handleError) 
+        .then((activity) => {
+            modifierUserActivity(activity.data.sessions)
+        })
     },[])
+
+    const [userAverageData, modifierUserAverage] = useState([]) 
+
+    useEffect(() => {
+    fetch("http://localhost:3000/user/18/average-sessions")
+        .then(response => response.json())
+        .then((average) => {
+            modifierUserAverage(average.data.sessions)
+        })
+    },[])
+
+    const [userPerformanceData, modifierUserPerformance] = useState([]) 
+
+    useEffect(() => {
+    fetch("http://localhost:3000/user/18/performance")
+        .then(response => response.json())
+        .then((performance) => {
+            modifierUserPerformance(performance.data)
+        })
+    },[])
+
+    const [userScoreData, modifierUserScore] = useState([]) 
+
+    useEffect(() => {
+    fetch("http://localhost:3000/user/18")
+        .then(response => response.json())
+        .then((score) => {
+            modifierUserScore(score.data.score)
+        })
+    },[])
+
+    const [userInformationData, modifierUserInformation] = useState([1]) 
+
+    useEffect(() => {
+    fetch("http://localhost:3000/user/18")
+        .then(response => response.json())
+        .then((score) => {
+            modifierUserInformation(score.data.keyData)
+        })
+    },[])
+
     return (
         <div>
             <Aside />
@@ -36,19 +73,19 @@ function Home() {
                         </div>
                         {/* Conteneur pour les trois graphiques sur la même ligne */}
                         <div className="charts-row">
-                        <div className="chart">
-                            <Courbe />
-                        </div>
-                        <div className="chart">
-                            <RadarChart />
-                        </div>
-                        <div className="chart">
-                            <Cercle />
-                        </div>
+                            <div className="chart">
+                                <Courbe average={userAverageData}/>
+                            </div>
+                            <div className="chart">
+                                {userPerformanceData.data && <RadarChart performance={userPerformanceData}/>}
+                            </div>
+                            <div className="chart">
+                                <Cercle score={userScoreData}/>
+                            </div>
                         </div>
                     </article>
                     {/* Informations supplémentaires */}
-                    <Information className="information" />
+                    <Information className="information" information={userInformationData}/>
                 </section>   
             </main>
         </div>

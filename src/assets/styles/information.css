@@ -3,6 +3,9 @@
   align-items: center;
   padding-bottom: 5em;
 }
+.info .info-item img {
+  width: 5em;
+}
 .info .info-item p {
   color: #282D30;
   font-weight: 700;

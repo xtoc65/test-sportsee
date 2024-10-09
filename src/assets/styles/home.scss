@@ -33,9 +33,7 @@ section {
   padding: 20px;
 
   article {
-    display: flex;
-    flex-direction: column;
-
+    margin-right: 3em;
     .header {
       text-align: left;
       margin: 0;
@@ -53,13 +51,10 @@ section {
 
     .charts-row {
       display: flex; // Aligner les graphiques horizontalement
-      gap: 20px; // Espacement entre les graphiques
-      height: 400px; // Hauteur fixe pour tous les graphiques
-      flex: 1; // Pour occuper tout l'espace disponible
+      margin-top: 2em; // Espacement entre les graphiques
 
       .chart {
         flex: 1; // Chaque graphique prend une part égale de l'espace
-        min-height: 100%; // Assurer une hauteur minimum
       }
     }
   }

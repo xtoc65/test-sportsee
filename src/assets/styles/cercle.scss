@@ -1,21 +1,16 @@
-.cercle{ 
-    position: relative;
-    width: 200px;
-    height: 100px;
-    h2{
-        text-align: left;
-        font-size: 16px;
-        color: #333;
-        margin-bottom: 10px;
+.cercle {
+    h2 {
+      margin: 30px 0 0 0;
+      text-align: left;
+      font-weight: bold;
     }
-    .texte{
-        position: absolute;
-        top: 175%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 24px;
-        font-weight: bold;
-        text-align: center;
-        color: #333;
+    .demi_cercle{
+        margin: -4em 0 0 0;
+    }
+    .texte {
+      text-align: center;
+      margin-top: -90px;
     }
 }
+
+  

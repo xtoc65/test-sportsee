@@ -32,8 +32,7 @@ section {
   padding: 20px;
 }
 section article {
-  display: flex;
-  flex-direction: column;
+  margin-right: 3em;
 }
 section article .header {
   text-align: left;
@@ -49,13 +48,10 @@ section article .chart.full-width {
 }
 section article .charts-row {
   display: flex;
-  gap: 20px;
-  height: 400px;
-  flex: 1;
+  margin-top: 2em;
 }
 section article .charts-row .chart {
   flex: 1;
-  min-height: 100%;
 }
 
 .information {

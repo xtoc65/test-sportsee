@@ -19,14 +19,12 @@ header {
 .nav_container img {
   height: 25px;
 }
-
-.nav_link {
+.nav_container .navigation {
+  display: flex;
+}
+.nav_container .navigation p {
   padding: 10px 15px;
-  text-decoration: none;
   font-size: 18px;
   text-align: center;
   color: white;
-}
-.nav_link .active {
-  text-decoration: underline;
 }/*# sourceMappingURL=header.css.map */

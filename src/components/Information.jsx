@@ -4,19 +4,8 @@ import Glucide from "../assets/glucides.png"
 import Lipides from "../assets/lipides.png"
 import "../assets/styles/information.css"
 
-const Data = [
-    {
-      "keyData": {
-        "calorieCount": 2500,
-        "proteinCount": 90,
-        "carbohydrateCount": 150,
-        "lipidCount": 120
-      }
-    }
-];
-
-function Information() {
-    const { calorieCount, proteinCount, carbohydrateCount, lipidCount } = Data[0].keyData;
+function Information({information}) {
+    const { calorieCount, proteinCount, carbohydrateCount, lipidCount } = information;
 
     return (
         <div className="info">
